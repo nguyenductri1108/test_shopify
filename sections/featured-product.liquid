@@ -213,7 +213,6 @@
                   -%}
                   {% # theme-check-enable %}
 
-                  <div>{{ 'TEST' }}</div>
                   <label class="quantity__label form__label" for="Quantity-{{ section.id }}">
                     {{ 'products.product.quantity.label' | t }}
                     <span class="quantity__rules-cart no-js-hidden{% if cart_qty == 0 %} hidden{% endif %}">
@@ -237,6 +236,14 @@
                       >
                     </span>
                   </label>
+                  <div>{% unless true and false and false or true %}
+  This evaluates to false, since Liquid checks tags like this:
+
+  true and (false and (false or true))
+  true and (false and true)
+  true and false
+  false
+{% endunless %}</div>
                   <quantity-input class="quantity">
                     <button class="quantity__button no-js-hidden" name="minus" type="button">
                       <span class="visually-hidden">
