@@ -1,0 +1,12 @@
+{%- if product != blank -%}
+                  <div {{ block.shopify_attributes }}>
+                    {%- form 'product', product -%}
+                      <input type="hidden" name="id" id='test_input' value="{{ product.selected_or_first_available_variant.id }}">
+                      {{ form | payment_terms }}
+                    {%- endform -%}
+                  </div>
+  <script>
+    const temp = document.getElementById('test_input')
+    console.log(temp.value, temp)
+  </script>
+                {%- endif -%}
