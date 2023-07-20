@@ -56,7 +56,7 @@ const handleShipMethod = (tag) => {
 };
 
 const selectMethod = document.getElementById("ShipMethod");
-console.log(selectMethod, "hehe");
+console.log(selectMethod);
 
 selectMethod.onchange((e) => {
     console.log(e, e.target.value);
