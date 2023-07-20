@@ -80,6 +80,7 @@ const params = new Proxy(new URLSearchParams(window.location.search), {
     get: (searchParams, prop) => searchParams.get(prop),
 });
 
-window.addEventListener("locationchange", function () {
-    console.log("location changed!");
-});
+const urlParams = new URLSearchParams(window.location.search);
+const myParam = urlParams.get("variants");
+
+console.log(myParam, "hehehee");
