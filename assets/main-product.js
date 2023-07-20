@@ -74,7 +74,7 @@ quantitySelect.onchange = (e) => {
 };
 
 const quantityTablePrice = document.getElementById("quantity-table-price");
-quantityTablePrice.innerHTML = `${meta.product.variants[0].price / 100} ${Shopify.shop.currency.active}`;
+quantityTablePrice.innerHTML = `${meta.product.variants[0].price / 100} ${Shopify.currency.active}`;
 
 const params = new Proxy(new URLSearchParams(window.location.search), {
     get: (searchParams, prop) => searchParams.get(prop),
