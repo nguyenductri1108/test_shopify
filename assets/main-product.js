@@ -67,8 +67,8 @@ handleDateTag([2, 4]);
 const quantitySelect = document.getElementById("ProductQuantity");
 const quantityTableCount = document.getElementById("quantity-table-count");
 
-const temp = document.querySelector('.quantity__input[name="quantity"]');
+const QuantityInputMain = document.querySelector('.quantity__input[name="quantity"]');
 quantitySelect.onchange = (e) => {
-    temp.value = e.target.value;
+    QuantityInputMain.value = e.target.value;
     quantityTableCount.innerHTML = `Buy ${e.target.value} item${e.target.value === 1 ? "" : "s"}`;
 };
