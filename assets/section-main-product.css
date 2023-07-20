@@ -1582,6 +1582,6 @@ li.tab.active {
     margin-top: 10px;
 }
 
-.main-custom-price select:focus{
+.main-custom-price select:focus-visible{
     border: none;
 }
