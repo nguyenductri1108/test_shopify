@@ -81,6 +81,7 @@ const params = new Proxy(new URLSearchParams(window.location.search), {
 });
 
 (function (history) {
+    console.log("hehehe");
     const pushState = history.pushState;
     history.pushState = function (state) {
         if (typeof history.onpushstate == "function") {
