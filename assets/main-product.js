@@ -72,3 +72,5 @@ quantitySelect.onchange = (e) => {
     QuantityInputMain.value = e.target.value;
     quantityTableCount.innerHTML = `Buy ${e.target.value} item${e.target.value === 1 ? "" : "s"}`;
 };
+
+console.log("hehe");
