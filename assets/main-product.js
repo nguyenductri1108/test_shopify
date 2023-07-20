@@ -81,6 +81,6 @@ const params = new Proxy(new URLSearchParams(window.location.search), {
 });
 
 const urlParams = new URLSearchParams(window.location.search);
-const myParam = urlParams.get("variants");
+const myParam = urlParams.get("variant");
 
 console.log(myParam, "hehehee");
