@@ -1619,13 +1619,13 @@ li.tab.active {
     display: inline-block;
     overflow: hidden;
     white-space: nowrap;
-    font-size: 12px;
     position: absolute;
 }
 
 .main-custom-price .Ship-process .Ship-process-point .Ship-process-title{
     top: -32px;
     font-style: italic;
+    font-size: 12px;
     font-weight: 300;
 }
 
