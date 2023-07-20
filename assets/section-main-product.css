@@ -1641,11 +1641,20 @@ li.tab.active {
     background-color: #115bb2;
 }
 
+.Discount-table{
+    margin-top: 10px;
+}
+
 .Discount-table table{
     table-layout: fixed;
     width: 300px;
 }
 
-.Discount-table{
-    margin-top: 10px;
+.Discount-table table td, .Discount-table table th {
+    padding: 6px;
+    border-color: #115bb2;
+    color: #115bb2;
 }
+
+
+

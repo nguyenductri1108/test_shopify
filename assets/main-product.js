@@ -56,7 +56,6 @@ const handleShipMethod = (tag) => {
 };
 
 const selectMethod = document.getElementById("ShipMethod");
-console.log(selectMethod);
 
 selectMethod.onchange = (e) => {
     handleShipMethod(e.target.value);
@@ -67,3 +66,10 @@ selectMethod.onchange = (e) => {
 
 orderDate_Ptag.innerHTML = formatDate(new Date());
 handleDateTag([2, 4]);
+
+const quantitySelect = document.getElementById("ProductQuantity");
+const quantityTableCount = document.getElementById("quantity-table-count");
+
+quantitySelect.onchange((e) => {
+    quantityTableCount.innerHTML = `Buy ${e.target.value} item${e.target.value === 1 ? "" : "s"}`;
+});
