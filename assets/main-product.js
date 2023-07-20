@@ -24,7 +24,6 @@ const orderDate_Ptag = document.getElementById("order-time-tag");
 const deliveryDate_Ptag = document.getElementById("delivery-time-tag");
 
 const shipMethod = document.querySelectorAll(".Ship-process-point");
-console.log(shipMethod);
 
 const padTo2Digits = (num) => {
     return num.toString().padStart(2, "0");
@@ -57,6 +56,7 @@ const handleShipMethod = (tag) => {
 };
 
 const selectMethod = document.getElementById("ShipMethod");
+console.log(selectMethod, "hehe");
 
 selectMethod.onchange((e) => {
     console.log(e, e.target.value);
