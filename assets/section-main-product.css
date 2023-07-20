@@ -1615,15 +1615,23 @@ li.tab.active {
 
 .main-custom-price .Ship-process .Ship-process-point p{
     color: #115bb2;
-    font-style: italic;
-    font-weight: 300;
     clear: both;
     display: inline-block;
     overflow: hidden;
     white-space: nowrap;
     font-size: 12px;
     position: absolute;
+}
+
+.main-custom-price .Ship-process .Ship-process-point .Ship-process-title{
     top: -32px;
+    font-style: italic;
+    font-weight: 300;
+}
+
+.main-custom-price .Ship-process .Ship-process-point .Ship-process-date{
+    bottom: -32px;
+    font-weight: 600;
 }
 
 .main-custom-price .Ship-process .Ship-process-line {
