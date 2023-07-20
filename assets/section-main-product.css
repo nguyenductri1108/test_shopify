@@ -1568,7 +1568,7 @@ ul.tabs {
 
 li.tab {
     display: inline-block;
-    padding: 10px 15px;
+    padding: 6px 20px;
     cursor: pointer;
     border-bottom: 1px solid #115bb2;
 }
