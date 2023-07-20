@@ -38,7 +38,7 @@ const handleDateTag = (arr) => {
     const dateReceived2 = new Date();
 
     dateReceived1.setDate(dateReceived1.getDate() + arr[0]);
-    dateReceived2.setDate(dateReceived1.getDate() + arr[1]);
+    dateReceived2.setDate(dateReceived2.getDate() + arr[1]);
 
     deliveryDate_Ptag.innerHTML = `${formatDate(dateReceived1)} - ${formatDate(dateReceived2)}`;
 };
@@ -61,3 +61,5 @@ console.log(selectMethod);
 selectMethod.onchange = (e) => {
     handleShipMethod(e.target.value);
 };
+
+handleDateTag([2, 4]);
