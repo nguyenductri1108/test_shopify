@@ -1621,7 +1621,9 @@ li.tab.active {
     display: inline-block;
     overflow: hidden;
     white-space: nowrap;
-    font-size: 12px;position: absolute;
+    font-size: 12px;
+    position: absolute;
+    top: -32px;
 }
 
 .main-custom-price .Ship-process .Ship-process-line {
