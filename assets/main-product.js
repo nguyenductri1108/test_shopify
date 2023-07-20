@@ -1,6 +1,5 @@
 tabs = document.querySelectorAll(".tab");
 
-console.log("hehehehe");
 tabContents = document.querySelectorAll(".tab-content");
 
 tabs.forEach(function (tab) {
