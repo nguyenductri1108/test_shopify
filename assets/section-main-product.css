@@ -1609,7 +1609,7 @@ li.tab.active {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 5px;
+    padding: 8px;
 }
 
 .main-custom-price .Ship-process .Ship-process-point i{
@@ -1617,7 +1617,7 @@ li.tab.active {
 }
 
 .main-custom-price .Ship-process .Ship-process-line {
-    height: 6px;
+    min-height: 6px;
     width: 140px;
     border-radius: 999px;
     background-color: #115bb2;
