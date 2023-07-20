@@ -20,3 +20,6 @@ tabs.forEach(function (tab) {
         content.classList.add("active");
     });
 });
+
+const shipMethod = document.querySelector("#ShipMethod");
+console.log(shipMethod, "hehe");
