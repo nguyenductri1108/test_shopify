@@ -1581,3 +1581,7 @@ li.tab.active {
 .main-custom-price {
     margin-top: 10px;
 }
+
+.main-custom-price select:focus{
+    border: none;
+}
