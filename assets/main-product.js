@@ -22,4 +22,4 @@ tabs.forEach(function (tab) {
 });
 
 const shipMethod = document.querySelector("#ShipMethod");
-console.log(shipMethod, "hehe");
+console.log(shipMethod.value, "hehe");
