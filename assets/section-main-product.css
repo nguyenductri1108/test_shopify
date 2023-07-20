@@ -1609,6 +1609,7 @@ li.tab.active {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 5px;
 }
 
 .main-custom-price .Ship-process .Ship-process-point i{
