@@ -1592,3 +1592,7 @@ li.tab.active {
     border-color: #115bb2;
     color: #115bb2;
 }
+
+.main-custom-price .Ship-process {
+    display: flex;
+}
