@@ -1570,11 +1570,10 @@ li.tab {
     display: inline-block;
     padding: 10px 15px;
     cursor: pointer;
-    border-bottom: 1px solid red;
+    border-bottom: 1px solid #115bb2;
 }
 
 li.tab.active {
     background-color: #115bb2;
-    color: grey;
-    border-bottom: 1px solid red;
+    color: white;
 }
