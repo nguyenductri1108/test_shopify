@@ -80,15 +80,6 @@ const params = new Proxy(new URLSearchParams(window.location.search), {
     get: (searchParams, prop) => searchParams.get(prop),
 });
 
-(function (history) {
-    console.log("hehehe");
-    const pushState = history.pushState;
-    history.pushState = function (state) {
-        if (typeof history.onpushstate == "function") {
-            history.onpushstate({ state: state });
-        }
-        console.log(state, "hihi");
-        // Call your custom function here
-        return pushState.apply(history, arguments);
-    };
-})(window.history);
+window.addEventListener("locationchange", function () {
+    console.log("location changed!");
+});
