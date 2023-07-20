@@ -21,5 +21,5 @@ tabs.forEach(function (tab) {
     });
 });
 
-const shipMethod = document.querySelector("#ShipMethod");
-console.log(shipMethod.value, "hehe");
+const shipMethod = document.querySelectorAll(".Ship-process-point");
+console.log(shipMethod);
