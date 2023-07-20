@@ -1595,4 +1595,23 @@ li.tab.active {
 
 .main-custom-price .Ship-process {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
 }
+
+.main-custom-price .Ship-process .Ship-process-point {
+    height: 40px;
+    width: 40px;
+    border-radius: 999px;
+    background-color: #115bb2;
+    margin: 0 -6px;
+}
+
+.main-custom-price .Ship-process .Ship-process-line {
+    height: 6px;
+    width: 140px;
+    border-radius: 999px;
+    background-color: #115bb2;
+}
+
