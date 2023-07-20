@@ -1648,7 +1648,7 @@ li.tab.active {
 .Discount-table table{
     table-layout: fixed;
     width: 300px;
-    box-shadow: 0 0 0 0.1rem #115bb2,.2);
+    box-shadow: 0 0 0 0.1rem #115bb2;
 }
 
 .Discount-table table td, .Discount-table table th {
