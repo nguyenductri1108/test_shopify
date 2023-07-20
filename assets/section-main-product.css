@@ -1577,3 +1577,7 @@ li.tab.active {
     background-color: #115bb2;
     color: white;
 }
+
+.main-custom-price {
+    margin-top: 10px;
+}
