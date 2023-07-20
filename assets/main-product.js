@@ -62,4 +62,5 @@ selectMethod.onchange = (e) => {
     handleShipMethod(e.target.value);
 };
 
+orderDate_Ptag.innerHTML = formatDate(new Date());
 handleDateTag([2, 4]);
