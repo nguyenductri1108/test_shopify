@@ -1606,6 +1606,13 @@ li.tab.active {
     border-radius: 999px;
     background-color: #115bb2;
     margin: 0 -6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-custom-price .Ship-process .Ship-process-point i{
+    color: white;
 }
 
 .main-custom-price .Ship-process .Ship-process-line {
