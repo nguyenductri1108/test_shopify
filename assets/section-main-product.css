@@ -1585,3 +1585,10 @@ li.tab.active {
 .main-custom-price select:focus-visible{
     border: none;
 }
+
+.main-custom-price select{
+    border-radius: 5px;
+    padding: 6px 6px;
+    border-color: #115bb2;
+    color: #115bb2;
+}
