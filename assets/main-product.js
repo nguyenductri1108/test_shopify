@@ -59,5 +59,5 @@ const selectMethod = document.getElementById("ShipMethod");
 console.log(selectMethod);
 
 selectMethod.onchange = (e) => {
-    console.log(e, e.target.value);
+    handleShipMethod(e.target.value);
 };
