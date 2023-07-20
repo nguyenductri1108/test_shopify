@@ -61,7 +61,7 @@ console.log(selectMethod);
 selectMethod.onchange = (e) => {
     handleShipMethod(e.target.value);
     const temp = document.querySelector('.quantity__input[name="quantity"]');
-    console.log(temp);
+    console.dir(temp);
     temp.value(10);
 };
 
