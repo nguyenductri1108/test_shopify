@@ -62,7 +62,7 @@ selectMethod.onchange = (e) => {
     handleShipMethod(e.target.value);
     const temp = document.querySelector('.quantity__input[name="quantity"]');
     console.dir(temp);
-    temp.value(10);
+    temp.value = 10;
 };
 
 orderDate_Ptag.innerHTML = formatDate(new Date());
