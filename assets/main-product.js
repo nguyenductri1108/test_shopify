@@ -85,14 +85,16 @@ const variantButtonsArr = Array.from(variantButtons);
 variantButtonsArr.forEach((item) => {
     item.addEventListener("click", () => {
         console.log("hehe");
-        const urlParams = new URLSearchParams(window.location.search);
-        const myParam = urlParams.get("variant");
-        console.log(myParam, "haha");
-        if (myParam) {
-            console.log("hihi");
-            const data = meta.product.variants.find((item) => item.id === myParam);
-            console.log(data, "hoho");
-            if (data) quantityTablePrice.innerHTML = `${data.price / 100} ${Shopify.currency.active}`;
-        }
+        setTimeout(() => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const myParam = urlParams.get("variant");
+            console.log(myParam, "haha");
+            if (myParam) {
+                console.log("hihi");
+                const data = meta.product.variants.find((item) => item.id === myParam);
+                console.log(data, "hoho");
+                if (data) quantityTablePrice.innerHTML = `${data.price / 100} ${Shopify.currency.active}`;
+            }
+        }, 0);
     });
 });
