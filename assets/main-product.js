@@ -84,6 +84,7 @@ const variantButtons = document.querySelectorAll(".product__info-container varia
 const variantButtonsArr = Array.from(variantButtons);
 variantButtonsArr.forEach((item) => {
     item.addEventListener("click", () => {
+        console.log("hehe");
         const urlParams = new URLSearchParams(window.location.search);
         const myParam = urlParams.get("variant");
         if (myParam) {
