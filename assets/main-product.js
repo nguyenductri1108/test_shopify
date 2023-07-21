@@ -91,16 +91,18 @@ quantitySelect.onchange = (e) => {
 // });
 
 const getDiscount = (amount) => {
-    if (amount === 1) {
+    let num = Number(amount);
+
+    if (num === 1) {
         return 1;
     }
-    if (amount >= 2 && amount <= 4) {
+    if (num >= 2 && num <= 4) {
         return 0.9;
     }
-    if (amount >= 5 && amount <= 7) {
+    if (num >= 5 && num <= 7) {
         return 0.8;
     }
-    if (amount >= 8) {
+    if (num >= 8) {
         return 0.7;
     }
 };
