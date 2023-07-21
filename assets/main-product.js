@@ -83,6 +83,5 @@ const params = new Proxy(new URLSearchParams(window.location.search), {
 const urlParams = new URLSearchParams(window.location.search);
 const myParam = urlParams.get("variant");
 
-console.log(myParam, "hehehee");
-
-const dsa = ".product__info-container variant-radios label";
+const variantButtons = document.querySelectorAll(".product__info-container variant-radios label");
+console.log(variantButtons);
