@@ -90,6 +90,21 @@ quantitySelect.onchange = (e) => {
 //     get: (searchParams, prop) => searchParams.get(prop),
 // });
 
+const getDiscount = (amount) => {
+    if (amount === 1) {
+        return 1;
+    }
+    if (amount >= 2 && amount <= 4) {
+        return 0.9;
+    }
+    if (amount >= 5 && amount <= 7) {
+        return 0.8;
+    }
+    if (amount >= 8) {
+        return 0.7;
+    }
+};
+
 const variantButtons = document.querySelectorAll(".product__info-container variant-radios label");
 const variantButtonsArr = Array.from(variantButtons);
 variantButtonsArr.forEach((item) => {
@@ -111,18 +126,3 @@ variantButtonsArr.forEach((item) => {
         }, 0);
     });
 });
-
-const getDiscount = (amount) => {
-    if (amount === 1) {
-        return 1;
-    }
-    if (amount >= 2 && amount <= 4) {
-        return 0.9;
-    }
-    if (amount >= 5 && amount <= 7) {
-        return 0.8;
-    }
-    if (amount >= 8) {
-        return 0.7;
-    }
-};
