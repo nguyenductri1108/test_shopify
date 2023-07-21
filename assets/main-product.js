@@ -80,9 +80,15 @@ const params = new Proxy(new URLSearchParams(window.location.search), {
     get: (searchParams, prop) => searchParams.get(prop),
 });
 
-const urlParams = new URLSearchParams(window.location.search);
-const myParam = urlParams.get("variant");
-
 const variantButtons = document.querySelectorAll(".product__info-container variant-radios label");
 const variantButtonsArr = Array.from(variantButtons);
-console.log(variantButtonsArr, variantButtons);
+variantButtonsArr.forEach((item) => {
+    item.addEventListener("click", () => {
+        const urlParams = new URLSearchParams(window.location.search);
+        const myParam = urlParams.get("variant");
+        if (myParam) {
+            const data = meta.product.variants.find((item) => item.id === myParam);
+            if (data) quantityTablePrice.innerHTML = `${data.price / 100} ${Shopify.currency.active}`;
+        }
+    });
+});
