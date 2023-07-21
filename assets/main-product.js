@@ -117,9 +117,7 @@ variantButtonsArr.forEach((item) => {
             if (myParam) {
                 QuantityInputMain.value = quantitySelect.value;
                 variantChoosing = meta.product.variants.find((item) => item.id == myParam);
-                console.log(variantChoosing, "hoho");
                 if (variantChoosing) {
-                    console.log(getDiscount(quantitySelect.value), quantitySelect.value);
                     quantityTablePrice.innerHTML = `${
                         (variantChoosing.price / 100) * getDiscount(quantitySelect.value) * quantitySelect.value
                     } ${Shopify.currency.active}`;
