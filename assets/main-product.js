@@ -68,33 +68,59 @@ const quantitySelect = document.getElementById("ProductQuantity");
 const quantityTableCount = document.getElementById("quantity-table-count");
 
 const QuantityInputMain = document.querySelector('.quantity__input[name="quantity"]');
-quantitySelect.onchange = (e) => {
-    QuantityInputMain.value = e.target.value;
-    quantityTableCount.innerHTML = `Buy ${e.target.value} item${e.target.value === 1 ? "" : "s"}`;
-};
+// QuantityInputMain.onchange= (e)=>{
+//     if(e.target.value <= 10)quantitySelect.value = e.target.value;
+//     else quantitySelect.value = 10
+// }
 
 const quantityTablePrice = document.getElementById("quantity-table-price");
 quantityTablePrice.innerHTML = `${meta.product.variants[0].price / 100} ${Shopify.currency.active}`;
 
-const params = new Proxy(new URLSearchParams(window.location.search), {
-    get: (searchParams, prop) => searchParams.get(prop),
-});
+let variantChoosing = meta.product.variants[0];
+
+quantitySelect.onchange = (e) => {
+    QuantityInputMain.value = e.target.value;
+    quantityTableCount.innerHTML = `Buy ${e.target.value} item${e.target.value === 1 ? "" : "s"}`;
+    quantityTablePrice.innerHTML = `${
+        (variantChoosing.price / 100) * getDiscount(quantitySelect.value) * quantitySelect.value
+    } ${Shopify.currency.active}`;
+};
+
+// const params = new Proxy(new URLSearchParams(window.location.search), {
+//     get: (searchParams, prop) => searchParams.get(prop),
+// });
 
 const variantButtons = document.querySelectorAll(".product__info-container variant-radios label");
 const variantButtonsArr = Array.from(variantButtons);
 variantButtonsArr.forEach((item) => {
     item.addEventListener("click", () => {
-        console.log("hehe");
         setTimeout(() => {
             const urlParams = new URLSearchParams(window.location.search);
             const myParam = urlParams.get("variant");
-            console.log(myParam, "haha");
             if (myParam) {
-                console.log("hihi");
-                const data = meta.product.variants.find((item) => item.id == myParam);
-                console.log(data, "hoho");
-                if (data) quantityTablePrice.innerHTML = `${data.price / 100} ${Shopify.currency.active}`;
+                QuantityInputMain.value = quantitySelect.value;
+                variantChoosing = meta.product.variants.find((item) => item.id == myParam);
+                console.log(variantChoosing, "hoho");
+                if (variantChoosing)
+                    quantityTablePrice.innerHTML = `${
+                        (variantChoosing.price / 100) * getDiscount(quantitySelect.value) * quantitySelect.value
+                    } ${Shopify.currency.active}`;
             }
         }, 0);
     });
 });
+
+const getDiscount = (amount) => {
+    if (amount === 1) {
+        return 1;
+    }
+    if (amount >= 2 && amount <= 4) {
+        return 0.9;
+    }
+    if (amount >= 5 && amount <= 7) {
+        return 0.8;
+    }
+    if (amount >= 8) {
+        return 0.7;
+    }
+};
