@@ -84,4 +84,5 @@ const urlParams = new URLSearchParams(window.location.search);
 const myParam = urlParams.get("variant");
 
 const variantButtons = document.querySelectorAll(".product__info-container variant-radios label");
-console.log(variantButtons);
+const variantButtonsArr = Array.from(variantButtons);
+console.log(variantButtonsArr);
