@@ -87,7 +87,9 @@ variantButtonsArr.forEach((item) => {
         console.log("hehe");
         const urlParams = new URLSearchParams(window.location.search);
         const myParam = urlParams.get("variant");
+        console.log(myParam, "haha");
         if (myParam) {
+            console.log("hihi");
             const data = meta.product.variants.find((item) => item.id === myParam);
             if (data) quantityTablePrice.innerHTML = `${data.price / 100} ${Shopify.currency.active}`;
         }
